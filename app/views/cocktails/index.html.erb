@@ -12,7 +12,7 @@
   <% @cocktails.each do |cocktail| %>
   <div class="card">
   <div class="image" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(
-    <%= cocktail.image.attached? ? (cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill) : 'https://loremflickr.com/cache/resized/65535_50313310487_1c15fca663_320_240_nofilter.jpg' %>)">
+    <%= cocktail.photo.attached? ? (cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill) : 'https://loremflickr.com/cache/resized/65535_50313310487_1c15fca663_320_240_nofilter.jpg' %>)">
 
 
   <div class="card-img-overlay">
