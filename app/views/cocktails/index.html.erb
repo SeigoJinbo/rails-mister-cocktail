@@ -1,0 +1,26 @@
+
+
+<div class="banner home" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://i.ytimg.com/vi/g80HccoU-_I/maxresdefault.jpg);">
+  <div class="container">
+    <h1> <strong>Hogwartz Brewery</strong><strong></strong></h1>
+    <p>Get proper wrecked after class!</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<div class="container">
+<div class="cards d-flex">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card">
+  <%= image_tag cocktail.image_url, alt: "alttext", class: "pic" %>
+  <div class="card-img-overlay">
+    <h4 class="card-title"><%= cocktail.name %></h4>
+    <p class="card-text">Some example text.</p>
+    <%= link_to 'details', cocktail_path(cocktail) %>
+  </div>
+</div>
+<% end %>
+</div>
+
+<%=link_to 'add', new_cocktail_path %>
+
+</div>
